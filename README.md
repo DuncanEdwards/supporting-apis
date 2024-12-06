@@ -18,5 +18,5 @@ Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
 `GET /employees-api/employees`\
 It can also be called with an optional `search` query string parameter:
 
-![alt text](image.png)
+![alt text](image.png)\
 which does a case insensitive search on first name, surname and address.
