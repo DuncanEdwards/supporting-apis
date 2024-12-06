@@ -4,7 +4,7 @@ import employees from "./employees-data.json";
 export const addEmployeesEndpoint = (app: Express) => {
   app.get("/employees-api/employees", async (req, res) => {
     const EMPLOYEES_RETURN_COUNT = 10;
-    await sleep(20);
+    await sleep(+(process.env.API_SLEEP_IN_MS ?? 0));
     const search = req.query.search as string | undefined;
 
     const employeesWithId = employees.map((employee, index) => ({
