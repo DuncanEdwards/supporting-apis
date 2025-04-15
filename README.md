@@ -30,11 +30,43 @@ which allows filtering by:
 
 - name
 - type
-  and sorting (ASC) by any animal property:
-  ![alt text](image-1.png)
+  and sorting (ASC) by any animal property:\
+  <img src="image-1.png" width="600"/>
 
 `GET /farm-api/animal-types`\
 (no querystring params)
 
 `GET /farm-api/animal-sort-options`\
 (no querystring params)
+
+### Chef API
+
+`GET /chefs/available`\
+(no querystring params)\
+<img src="image-2.png" width="400"/>
+
+`GET /chefs/job-titles`\
+(no querystring params)
+
+`POST /chefs/promote`\
+(no querystring params)
+(body is a list of chef Ids - eg `[2, 7]`)
+
+### Accounts API
+
+`POST /accounts/login`
+(unsecured)
+example body:
+
+```
+{
+    "email":"MiguelBBingham@rhyta.com",
+    "password":"*****"
+}
+```
+
+`GET /accounts/transactions`
+(needs a Bearer token)
+
+`GET /accounts/admin`
+(needs a Bearer token of admin level)
