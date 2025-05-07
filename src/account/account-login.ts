@@ -28,7 +28,7 @@ export const addLoginEnpoint = (app: Express) => {
       );
 
       if (matchingUser === undefined) {
-        return res.status(StatusCodes.FORBIDDEN).json({
+        return res.status(StatusCodes.UNAUTHORIZED).json({
           success: false,
           message: "Invalid email or password",
         });
